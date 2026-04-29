@@ -1,0 +1,84 @@
+<html>
+<head>
+    <title>Form Pendaftaran Kursus</title>
+</head>
+<body>
+<table border="1" cellspacing="0" cellpadding="0" width="600" align="center">
+    <tr>
+        <td bgcolor="skyblue" align="center" height="80">
+            <font color="red" size="6" face="arial"><b>Pendaftaran Kursus</b></font>
+        </td>
+    </tr>
+    <tr>
+        <td bgcolor="gray">
+            <form action="proses.php" method="post">
+                <table border="0" cellspacing="5" cellpadding="5" width="100%">
+                    <tr>
+                        <td colspan="2">
+                            <font size="4" face="arial"><b>Data Diri</b></font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="35%"><label for="nama">Nama</label></td>
+                        <td><input type="text" name="nama" id="nama" size="30" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="nim">Nim</label></td>
+                        <td><input type="text" name="nim" id="nim" size="30"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">E-mail</label></td>
+                        <td><input type="email" name="email" id="email" size="30"></td>
+                    </tr>
+                    <tr>
+                        <td>Tanggal Lahir</td>
+                        <td><input type="date" name="tgl_lahir"></td>
+                    </tr>
+                    <tr>
+                        <td valign="top">Jenis Kelamin</td>
+                        <td>
+                            <input type="radio" name="jk" value="L" id="pria"> <label for="pria">Laki-laki</label><br>
+                            <input type="radio" name="jk" value="P" id="wanita"> <label for="wanita">Perempuan</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top">Pilih Program Kursus</td>
+                        <td>
+                            <input type="checkbox" name="kursus[]" value="C#"> C#<br>
+                            <input type="checkbox" name="kursus[]" value="Java"> Java<br>
+                            <input type="checkbox" name="kursus[]" value="SQL"> SQL<br>
+                            <input type="checkbox" name="kursus[]" value="HTML_PHP"> HTML dan PHP
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Pilihan Hari/Jam Kursus</td>
+                        <td>
+                            <select name="jadwal">
+                                <option value="senin-rabu">Senin - Rabu/09.00 - 11.00</option>
+                                <option value="kamis-sabtu">Kamis - Sabtu/13.00 - 15.00</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+        </td>
+    </tr>
+    <tr>
+        <td bgcolor="salmon">
+            <table border="0" cellspacing="5" cellpadding="5" width="100%">
+                <tr>
+                    <td>
+                        <font color="maroon">Komentar Anda</font><br>
+                        <textarea name="komentar" rows="5" cols="60">Tuliskan deskripsi singkat tentang anda.</textarea><br><br>
+                        
+                        <input type="reset" value="Ulangi">
+                        <input type="submit" value="Kirim">
+                        <input type="button" value="Batal">
+                    </td>
+                </tr>
+            </table>
+            </form>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
