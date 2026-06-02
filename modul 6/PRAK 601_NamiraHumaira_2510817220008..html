@@ -1,93 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        .gallery img {
-            width: 100%;
-            aspect-ratio: 1 / 1;
-            object-fit: cover;
-            display: block;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demo Bootstrap</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    header {
+      position: relative;
+    }
+    .header-corners div {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: transparent;
+      border-color: black;
+      border-style: solid;
+    }
+    .header-corners .top-left {
+      border-width: 15px 0 0 15px;
+      top: 0;
+      left: 0;
+    }
+    .header-corners .top-right {
+      border-width: 15px 15px 0 0;
+      top: 0;
+      right: 0;
+    }
+    .navbar {
+      height: 150px;
+      padding: 0 100px;
+    }
+    .fontstyle1 {
+      font-family: 'Times New Roman', cursive;
+    }
+    .img-container {
+      padding: 20px 0;
+    }
+    .img-container img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
+    }
+    .height1 {
+      height: 300px;
+    }
+    .footer {
+      height: 300px;
+      margin-top: 200px;
+      position: relative;
+    }
+    .footer-corners div {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: transparent;
+      border-color: black;
+      border-style: solid;
+    }
+    .footer-corners .bottom-left {
+      border-width: 0 0 15px 15px;
+      bottom: 0;
+      left: 4px;
+    }
+    .footer-corners .bottom-right {
+      border-width: 0 15px 15px 0;
+      bottom: 0;
+      right: 10px;
+    }
+  </style>
 </head>
-<body>
-      
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a href="#" class="navbar-brand">JPhotography</a>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link">HOME</a></li>
-                    <li class="nav-item"><a class="nav-link">ABOUT ME</a></li>
-                    <li class="nav-item"><a class="nav-link">PORTFOLIO</a></li>
-                    <li class="nav-item"><a class="nav-link">CONTACT</a></li>
-                </ul>
-            </div>
-        </div>
+<body class="d-flex flex-column min-vh-100">
+
+  <header>
+    <nav class="navbar bg-body-tertiary fontstyle1">
+      <div class="container-fluid">
+        <span class="navbar-brand mb-4 mt-4">
+          <h1 class="fw-bold">JPhotography</h1>
+        </span>
+        <ul class="nav nav-pills me-5 fw-bold" style="gap: 20px;">
+          <li class="nav-item">
+            <a class="nav-link border text-dark" href="#">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="color: #919599;">ABOUT ME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="color: #919599;">PORTFOLIO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="color: #919599;">CONTACT</a>
+          </li>
+        </ul>
+      </div>
     </nav>
-
-    <br><br><br>
-    <section class="hero">
-        <div class="container text-center">
-            <h2>Hi. Hello.. I Am JohnDas...!</h2>
-            <p class="body2">I Travel Around The World To Get The Best Photos.!</p>
-            <p class="caption">AWARD WINNING PHOTOGRAPHER / CINEMATOGRAPHER / WRITER</p>
-            <br><br><br>
-
-            <div class="container text-center my-4">
-                <button class="filter-btn1">All</button>
-                <button class="filter-btn2">Landscape</button>
-                <button class="filter-btn2">Portrait</button>
-                <button class="filter-btn2">Product</button>
-            </div>
-        </div>
-    </section>
-
-    <section class="container gallery">
-        <div class="row g-1">
-            <div class="col-6 col-md-3"><img src="FOTO/hyunsuk.jpg" alt="Photo 1"></div>
-            <div class="col-6 col-md-3"><img src="FOTO/jihoon.jpg" alt="Photo 2"></div>
-            <div class="col-6 col-md-3"><img src="FOTO/yoshi.jpg" alt="Photo 3"></div>
-            <div class="col-6 col-md-3"><img src="FOTO/junkyu.jpg" alt="Photo 4"></div>
-            <div class="col-6 col-md-3"><img src="FOTO/jaehyuk.jpg" alt="Photo 5"></div>
-            <div class="col-6 col-md-3"><img src="FOTO/asahi.jpg" alt="Photo 6"></div>
-            <div class="col-6 col-md-3"><img src="FOTO/doyoung.jpg" alt="Photo 7"></div>
-            <div class="col-6 col-md-3"><img src="FOTO/haruto.jpg" alt="Photo 8"></div>
-            <div class="col-6 col-md-3"><img src="FOTO/jeongwoo.jpg" alt="Photo 9"></div>
-            <div class="col-6 col-md-3"><img src="FOTO/junghwan.jpg" alt="Photo 10"></div>
-            <div class="col-6 col-md-3"><img src="FOTO/treasure 1.jpg" alt="Photo 11"></div>
-            <div class="col-6 col-md-3"><img src="FOTO/treasure 2.jpg" alt="Photo 12"></div>
-            <div class="col-6 col-md-3"><img src="FOTO/treasure 3.jpg" alt="Photo 13"></div>
-            <div class="col-6 col-md-3"><img src="FOTO/treasure 4.jpg" alt="Photo 14"></div>
-            <div class="col-6 col-md-3"><img src="FOTO/treasure 5.jpg" alt="Photo 15"></div>
-            <div class="col-6 col-md-3"><img src="FOTO/treasure 6.jpg" alt="Photo 16"></div>
-        </div>
-    </section>
-    <br><br><br><br>
-    <div class="row bottom w-100 m-0">
-        <div class="col d-flex flex-column align-items-center justify-content-center">
-            <h1 class="logo" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">JPhotography</h1>
-            <p class="copyr">&copy; Copyrights 2019 All Rights Reserved</p>
-            <div class="icon">
-                <i class="fa-brands fa-dribbble pe-5"></i>
-                <i class="fa-brands fa-behance pe-5"></i>
-                <i class="fa-brands fa-instagram pe-5"></i>
-                <i class="fa-brands fa-500px pe-5"></i>
-                <i class="fa-brands fa-flickr pe-5"></i>
-                <i class="fa-brands fa-square-facebook pe-5"></i>
-                <i class="fa-brands fa-twitter pe-5"></i>
-            </div>
-        </div>
+    <div class="header-corners">
+      <div class="top-left"></div>
+      <div class="top-right"></div>
     </div>
-      
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+  </header>
+
+  <div class="row height1 bg-white m-0">
+    <div class="col d-flex flex-column justify-content-center align-items-center fontstyle1">
+      <h1 class="fw-bold">Hi. Hello.. I am Nami.!</h1>
+      <h2 class="fw-bold">I Travel Around The World To Get The Best Photos.!</h2>
+      <p class="fw-bold" style="letter-spacing: 2px; color: #919599;">
+        AWARD WINNING PHOTOGRAPHER / CINEMATOGRAPHER / WRITER
+      </p>
+    </div>
+  </div>
+
+  <div class="row bg-white m-0">
+    <div class="col d-flex flex-column justify-content-center align-items-center fontstyle1">
+      <p class="d-inline-flex mb-0">
+        <button type="button" class="btn active rounded-pill text-secondary">All</button>
+        <button type="button" class="btn px-4 rounded-pill text-secondary">Landscape</button>
+        <button type="button" class="btn px-4 rounded-pill text-secondary">Portrait</button>
+        <button type="button" class="btn px-4 rounded-pill text-secondary">Product</button>
+      </p>
+    </div>
+  </div>
+
+  <div class="container-fluid img-container bg-white">
+    <div class="row g-2 m-0">
+      <div class="col-6 col-md-3">
+        <img src="FOTO/hyunsuk.jpg" alt="Photo 1" class="img-fluid">
+      </div>
+      <div class="col-6 col-md-3">
+        <img src="FOTO/jihoon.jpg" alt="Photo 2" class="img-fluid">
+      </div>
+      <div class="col-6 col-md-3">
+        <img src="FOTO/yoshi.jpg" alt="Photo 3" class="img-fluid">
+      </div>
+      <div class="col-6 col-md-3">
+        <img src="FOTO/junkyu.jpg" alt="Photo 4" class="img-fluid">
+      </div>
+      <div class="col-6 col-md-3">
+        <img src="FOTO/jaehyuk.jpg" alt="Photo 5" class="img-fluid">
+      </div>
+      <div class="col-6 col-md-3">
+        <img src="FOTO/asahi.jpg" alt="Photo 6" class="img-fluid">
+      </div>
+      <div class="col-6 col-md-3">
+        <img src="FOTO/doyoung.jpg" alt="Photo 7" class="img-fluid">
+      </div>
+      <div class="col-6 col-md-3">
+        <img src="FOTO/haruto.jpg" alt="Photo 8" class="img-fluid">
+      </div>
+      <div class="col-6 col-md-3">
+        <img src="FOTO/jeongwoo.jpg" alt="Photo 9" class="img-fluid">
+      </div>
+      <div class="col-6 col-md-3">
+        <img src="FOTO/junghwan.jpg" alt="Photo 10" class="img-fluid">
+      </div>
+      <div class="col-6 col-md-3">
+        <img src="FOTO/treasure 1.jpg" alt="Photo 11" class="img-fluid">
+      </div>
+      <div class="col-6 col-md-3">
+        <img src="FOTO/treasure 2.jpg" alt="Photo 12" class="img-fluid">
+      </div>
+      <div class="col-6 col-md-3">
+        <img src="FOTO/treasure 3.jpg" alt="Photo 13" class="img-fluid">
+      </div>
+      <div class="col-6 col-md-3">
+        <img src="FOTO/treasure 4.jpg" alt="Photo 14" class="img-fluid">
+      </div>
+      <div class="col-6 col-md-3">
+        <img src="FOTO/treasure 5.jpg" alt="Photo 15" class="img-fluid">
+      </div>
+      <div class="col-6 col-md-3">
+        <img src="FOTO/treasure 6.jpg" alt="Photo 16" class="img-fluid">
+      </div>
+    </div>
+  </div>
+
+  <div class="row footer bg-white m-0">
+    <div class="col d-flex flex-column align-items-center justify-content-center fontstyle1">
+      <h1 class="fw-bold">JPhotography</h1>
+      <p class="space2 text-muted">&copy;Copyrights 2026. All Rights Reserved</p>
+      <div class="h2 py-2 text-muted">
+        <i class="fa-brands fa-dribbble pe-5"></i>
+        <i class="fa-brands fa-behance pe-5"></i>
+        <i class="fa-brands fa-instagram pe-5"></i>
+        <i class="fa-brands fa-500px pe-5"></i>
+        <i class="fa-brands fa-flickr pe-5"></i>
+        <i class="fa-brands fa-square-facebook pe-5"></i>
+        <i class="fa-brands fa-x-twitter pe-5"></i>
+      </div>
+    </div>
+    <div class="footer-corners">
+      <div class="bottom-left ms-2"></div>
+      <div class="bottom-right"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
 </body>
 </html>
